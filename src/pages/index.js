@@ -1,21 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+import Header from "../components/header"
+import {graphql} from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+// const query = graphql`
+//   query myQuery {
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+//   }
+// `
+
+const IndexPage = ({data}) => (
+  <div id="app">
+    <Header/>
+    <div className="info">
+      <p>Noir Bar & Lounge</p>
+      <p className="info-address">425 Glenwood ave
+        <span>Raliegh NC</span>
+      </p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <div className="tagline">Speak Your Truth.</div>
+    <button className="cta">Learn More</button>
+  </div>
 )
+
 
 export default IndexPage

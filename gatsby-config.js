@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `City Soul Cafe`,
+    description: `Speak Your Truth.`,
+    author: `@taorep`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'biga5f3v',
+        dataset: 'production',
+        watchMode: true,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,6 +23,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

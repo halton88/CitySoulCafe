@@ -1,22 +1,26 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "City Soul Cafe",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Speak Your Truth",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Taorep <tao.rep@gmail.com>",
   "dependencies": {
     "gatsby": "^2.15.29",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sass": "^2.1.20",
     "gatsby-plugin-sharp": "^2.2.28",
     "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-source-sanity": "^5.0.3",
     "gatsby-transformer-sharp": "^2.2.20",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "typeface-permanent-marker": "0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
@@ -35,9 +39,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-default.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-default#readme",
+  "main": "gatsby-browser.js"
 }

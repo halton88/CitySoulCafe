@@ -1,0 +1,111 @@
+$primary: orangered;
+
+html, body {
+  height: 100%;
+  background: #000;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+    padding: 0.5rem;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('../images/truth.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    header{
+      .logo {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        border: 3px solid #fff;
+        text-transform: uppercase;
+        text-decoration:none;
+        color: #fff;
+        &-city {
+          letter-spacing: 12px;
+        }
+        &-soul {
+          font-weight: bold;
+          letter-spacing: 8px;
+        }
+        &-cafe {
+          letter-spacing: 9px;
+        }
+        padding: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0;
+      }
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-top:0.25rem;
+      .navbar {
+        display: flex;
+        
+        &-link{
+          align-self: center;
+          text-decoration: none;
+          color: #fff;
+        }
+
+        li {
+          list-style: none;
+          margin-right: 1rem;
+          align-self: center;
+          font-weight: bold;
+          transition: .15s;
+          border-bottom: 2px solid transparent;
+          &:hover {
+            cursor: pointer;
+            border-bottom: 2px solid #fff;
+          }
+        }
+        .donate {
+          color:  $primary;
+          font-weight: bold;
+          &:hover {
+            border-bottom: 2px solid $primary;
+          }
+        }
+    }
+  }
+  .info-address {
+    span {
+      display: block;
+      margin-top:0.25rem;
+    }
+  }
+  .tagline {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Permanent Marker";
+    transform: rotate(356deg);
+  }
+
+  .cta {
+    width: auto;
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background-color: orangered;
+    color: #fff;
+    border:none;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 3rem;
+    transition: .15s;
+    &:hover {
+      color: $primary;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+}
