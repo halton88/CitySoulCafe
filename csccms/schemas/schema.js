@@ -30,6 +30,28 @@ export default createSchema({
         name: 'featured',
         title: 'Featured',
         type: 'boolean',
+      },
+      {
+        name: 'type',
+        title: 'Type',
+        type: 'arry',
+        of: [
+          {
+            title:'DJ Supreme',
+            name: 'Supreme',
+            type: 'string',
+          },
+          {
+            title:'Business Mixer',
+            name: 'Mixer',
+            type: 'string',
+          },
+          {
+            title:'Local Feature',
+            name: 'Feature',
+            type: 'string',
+          }
+        ]
       }
     ]
   },

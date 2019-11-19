@@ -13,11 +13,54 @@ html, body {
     background-color: #000;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    background: url('../images/truth.jpg');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+
+    #home {
+      background: url('../images/truth.jpg');
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .events {
+      margin: auto;
+      margin-top: 2rem;
+      padding: 0 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    .dj {
+      background: url('../images/turntable.jpg');
+    }
+
+    .drink {
+      background: url('../images/drink.jpg');
+    }
+
+    .event {
+      margin: auto;
+
+      h2 {
+        font-size: 4rem;
+        margin: 0.25rem 0;
+      }
+      h5 {
+        font-size: 1rem;
+      }
+    }
+
+    .event-img {
+      background: url('../images/event.jpg');
+      background-size: cover;
+      object-fit: cover;
+      text-align: center;
+      position: relative;
+      width: 300px;
+      height: 350px;
+    }
+
     header{
       .logo {
         display: flex;
@@ -47,7 +90,7 @@ html, body {
       padding-top:0.25rem;
       .navbar {
         display: flex;
-        
+
         &-link{
           align-self: center;
           text-decoration: none;

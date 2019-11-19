@@ -1,13 +1,15 @@
 import React from "react"
 import {graphql} from "gatsby"
 import Header from "../components/header"
+import Event from "../components/event"
 
-const query = graphql`
+export const query = graphql`
     query MyQuery {
     allSanityEvent {
       nodes {
+        id
         title
-        date(formatString: "")
+        date(formatString: "MMMM D")
         featured
       }
     }
@@ -19,15 +21,18 @@ class Events extends React.Component{
     super()
   }
   generateEvents() {
-    console.log(data)
+    return this.props.data.allSanityEvent.nodes.map(event => {
+      return <Event key={event.id} data={event}/>
+    })
   }
   render(){
     return(
       <div id="app">
         <Header/>
-        {this.generateEvents()}
+        <div className="events">
+          {this.generateEvents()}
+        </div>
       </div>
-       
     )
   }
 }

@@ -10,7 +10,8 @@ import {graphql} from "gatsby";
 
 const IndexPage = ({data}) => (
   <div id="app">
-    <Header/>
+    <div id="home">
+      <Header/>
     <div className="info">
       <p>Noir Bar & Lounge</p>
       <p className="info-address">425 Glenwood ave
@@ -19,6 +20,7 @@ const IndexPage = ({data}) => (
     </div>
     <div className="tagline">Speak Your Truth.</div>
     <button className="cta">Learn More</button>
+    </div>
   </div>
 )
 
