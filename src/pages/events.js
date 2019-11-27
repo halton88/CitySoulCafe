@@ -3,19 +3,6 @@ import {graphql} from "gatsby"
 import Header from "../components/header"
 import Event from "../components/event"
 
-export const query = graphql`
-    query MyQuery {
-    allSanityEvent {
-      nodes {
-        id
-        title
-        date(formatString: "MMMM D")
-        featured
-      }
-    }
-  }
-`
-
 class Events extends React.Component{
   constructor(){
     super()

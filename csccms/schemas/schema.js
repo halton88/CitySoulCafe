@@ -31,28 +31,6 @@ export default createSchema({
         title: 'Featured',
         type: 'boolean',
       },
-      {
-        name: 'type',
-        title: 'Type',
-        type: 'arry',
-        of: [
-          {
-            title:'DJ Supreme',
-            name: 'Supreme',
-            type: 'string',
-          },
-          {
-            title:'Business Mixer',
-            name: 'Mixer',
-            type: 'string',
-          },
-          {
-            title:'Local Feature',
-            name: 'Feature',
-            type: 'string',
-          }
-        ]
-      }
     ]
   },
   {
@@ -81,6 +59,38 @@ export default createSchema({
         type: 'boolean',
       }
     ]
+  },
+  {
+    title: 'Team Member',
+    name: 'team_member',
+    type: "document",
+    fields: [
+      {
+        name: 'Image',
+        title: 'Image',
+        type: 'image',
+      },
+      {
+        name: 'name',
+        title: 'Name',
+        type: 'string',
+      },
+      {
+        name: 'primary_title',
+        title: 'Primary Title',
+        type: 'string',
+      },
+      {
+        name: 'secondary_title',
+        title: 'Secondary Title',
+        type: 'string',
+      },
+      {
+        name: 'email',
+        title: 'Email',
+        type: 'email',
+      }
+    ],
   }
   ])
 })
