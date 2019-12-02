@@ -1,5 +1,4 @@
 import React from "react"
-import {graphql} from "gatsby"
 import Header from "../components/header"
 import Event from "../components/event"
 
@@ -17,7 +16,7 @@ class Events extends React.Component{
       <div id="app">
         <Header/>
         <div className="events">
-          {this.generateEvents()}
+          {this.generateEvents(this.props.data)}
         </div>
       </div>
     )

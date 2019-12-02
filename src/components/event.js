@@ -5,13 +5,25 @@ class Event extends React.Component{
     super()
   }
   render(){
-    const day = this.props.data.date;
+    console.log(this.props)
     return(
-      <div className="event">
-        <h2>{day.slice(-2)}</h2>
-        {/* <h5>{this.props.data.date.slice(0,-2)}</h5> */}
-        <div className="event-img"></div>
-        <h3>{this.props.data.title}</h3>
+      <div className="events">
+        <div className="event">
+          <h3>1st Wednesdays</h3>
+          <h4>DJ Supreme Live on the 1's & 2's</h4>
+        </div>
+        <div className="event">
+          <h3>2nd Wednesdays</h3>
+          <h4>Business Mixer</h4>
+        </div>
+        <div className="event">
+          <h3>3rd Wednesdays</h3>
+          <h4>DJ Supreme Love on the 1's & 2's</h4>
+        </div>
+        <div className="event">
+          <h3>4th Wednesdays</h3>
+          <h4>Local Feature or touring Feature TBA</h4>
+        </div>
       </div>
     )
   }

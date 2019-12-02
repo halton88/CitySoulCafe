@@ -5,6 +5,6 @@ import Nav from "./nav"
 export default () => (
   <header>
     <Logo/>
-    <Nav/>
+
   </header>
 )

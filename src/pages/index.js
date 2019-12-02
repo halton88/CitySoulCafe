@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "../components/header"
+import Event from "../components/Event"
 import About from "../components/about"
 import {graphql} from "gatsby";
 
@@ -14,8 +15,7 @@ query MyQuery {
       id
       Image {
         asset {
-          path
-          label
+          url
         }
       }
     }
@@ -52,7 +52,9 @@ const IndexPage = ({data}) => (
     <div className="tagline">Speak Your Truth.</div>
     <button className="cta">Check Us Out</button>
     </div>
+    <Event data={data.allSanityEvent}/>
     <About data={data.allSanityTeamMember}/>
+    <Contact/>
   </div>
 )
 

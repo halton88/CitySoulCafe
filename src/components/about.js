@@ -7,7 +7,7 @@ const generateTeam = (team) => {
     team.map((teammate) => (
     <div className="team" key={teammate.id}>
       <h3>{teammate.name}</h3>
-      {/* <img src={teammate.Image.asset.path}></img> */}
+     <img className="team-img" src={teammate.Image.asset.url}/>
       <p>{teammate.primary_title}</p>
       <p>{teammate.secondary_title}</p>
     </div>    
