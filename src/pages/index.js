@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../components/header"
 import Event from "../components/Event"
 import About from "../components/about"
+import Contact from "../components/contact"
 import {graphql} from "gatsby";
 
 export const query = graphql`
@@ -41,13 +42,10 @@ query MyQuery {
 const IndexPage = ({data}) => (
   <div id="app">
     <div id="home">
-      {/* {console.log(data)} */}
       <Header/>
     <div className="info">
       <p>Noir Bar & Lounge</p>
-      <p className="info-address">425 Glenwood ave
-        <span>Raliegh NC</span>
-      </p>
+      <p className="info-address">425 Glenwood ave, Raliegh NC</p>
     </div>
     <div className="tagline">Speak Your Truth.</div>
     <button className="cta">Check Us Out</button>

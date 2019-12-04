@@ -1,11 +1,7 @@
 import React from "react"
 
 class Event extends React.Component{
-  constructor(){
-    super()
-  }
   render(){
-    console.log(this.props)
     return(
       <div className="events">
         <div className="event">
