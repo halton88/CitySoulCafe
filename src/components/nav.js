@@ -2,9 +2,9 @@ import React from "react"
 
 const Nav = () => (
  <nav className="navbar">
- <li><a target="#about">ABOUT</a></li>
- <li><a target="#about">EVENTS</a></li>
- <li><a target="#about">CONTACT</a></li>
+ <div><a target="#about">ABOUT</a></div>
+ <div><a target="#events">EVENTS</a></div>
+ <div><a target="#contact">CONTACT</a></d>
  </nav>
 )
 

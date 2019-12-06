@@ -1896,8 +1896,13 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30001012:
+<<<<<<< HEAD
   version "1.0.30001013"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001013.tgz#da2440d4d266a17d40eb79bd19c0c8cc1d029c72"
+=======
+  version "1.0.30001015"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001015.tgz#15a7ddf66aba786a71d99626bc8f2b91c6f0f5f0"
+>>>>>>> b3d06f6fd773e4482a483e481b6fb019a314c772
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -4891,8 +4896,13 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-releases@^1.1.41:
+<<<<<<< HEAD
   version "1.1.41"
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.41.tgz#57674a82a37f812d18e3b26118aefaf53a00afed"
+=======
+  version "1.1.42"
+  resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.42.tgz#a999f6a62f8746981f6da90627a8d2fc090bbad7"
+>>>>>>> b3d06f6fd773e4482a483e481b6fb019a314c772
   dependencies:
     semver "^6.3.0"
 
