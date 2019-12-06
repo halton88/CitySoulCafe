@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../components/header"
 import Event from "../components/Event"
 import About from "../components/about"
+import Contact from "../components/contact"
 import {graphql} from "gatsby";
 
 export const query = graphql`
