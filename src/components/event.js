@@ -1,28 +1,30 @@
 import React from "react"
 
-class Event extends React.Component{
-  render(){
-    return(
-      <div className="events">
-        <div className="event">
-          <h3>1st Wednesdays</h3>
-          <h4>DJ Supreme Live on the 1's & 2's</h4>
-        </div>
-        <div className="event">
-          <h3>2nd Wednesdays</h3>
-          <h4>Business Mixer</h4>
-        </div>
-        <div className="event">
-          <h3>3rd Wednesdays</h3>
-          <h4>DJ Supreme Love on the 1's & 2's</h4>
-        </div>
-        <div className="event">
-          <h3>4th Wednesdays</h3>
-          <h4>Local Feature or touring Feature TBA</h4>
-        </div>
+export default () => (
+  <div className="events">
+    <h2 class="events_title">The Schedule</h2>
+    <div className="event event1">
+      <h3 className="event_title">1st Wednesdays</h3>
+      <h4 className="event_info">DJ Supreme Live on the 1's & 2's</h4>
+      <div className="event_description"> 
+        {/* <p>Open Mic Poetry | Spoken Word | Singers</p> */}
       </div>
-    )
-  }
-}
 
-export default Event
+    </div>
+    <div className="event event2">
+      <h3 className="event_title">2nd Wednesdays</h3>
+      <h4 className="event_info">Business Mixer</h4>
+      <div className="event_description"></div>
+    </div>
+    <div className="event event3">
+      <h3 className="event_title">3rd Wednesdays</h3>
+      <h4 className="event_info">DJ Supreme Love on the 1's & 2's</h4>
+      <div className="event_description"></div>
+    </div>
+    <div className="event event4">
+      <h3 className="event_title">4th Wednesdays</h3>
+      <h4 className="event_info">Local Feature or touring Feature TBA</h4>
+      <div className="event_description"></div>
+    </div>
+  </div>
+)

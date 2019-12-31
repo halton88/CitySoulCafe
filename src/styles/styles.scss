@@ -2,8 +2,8 @@ $primary: blueviolet;
 
 * {
   word-wrap: wrap;
-  transition: 0.25s cubic-bezier(0.52, -0.04, 0.38, .9);
-
+  // transition: 0.1s cubic-bezier(0.52, -0.04, 0.38, .9);
+  transition: 0.2s;
 }
 
 html, body {
@@ -32,10 +32,16 @@ html, body {
     }
 
     .events {
-      margin: auto;
-      margin-top: 2rem;
+      margin: 0 auto;
+      padding-block: 0 2rem;
       display: flex;
       flex-direction: column;
+      background-color: #333333;
+
+      &_title{
+        margin: 1rem 0;
+        text-align: center;
+      }
     }
 
     .dj {
@@ -47,13 +53,32 @@ html, body {
     }
 
     .event {
+      border-radius: 3px;
+      padding: 1rem;
+      margin: 0.5rem 2rem;
 
-      h2 {
-        font-size: 4rem;
+      &_title {
+        font-size: 2rem;
         margin: 0.25rem 0;
       }
-      h5 {
+      &_info {
+        margin:0;
         font-size: 1rem;
+        color: #eee;
+        // display: none;
+      }
+
+      &1 {
+        background-color: tomato;
+      }
+      &2 {
+        background-color: #406fe0;
+      }
+      &3 {
+        background-color: blueviolet;
+      }
+      &4 {
+        background-color: green;
       }
     }
 
@@ -67,7 +92,7 @@ html, body {
       height: 350px;
     }
 
-    header{
+    header {
       .logo {
         background-image: url('../images/shirt4.png');
         background-size: cover;
@@ -115,9 +140,10 @@ html, body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
-    background-color:#131313;
+    background-color:#131313c4;
     margin: 1rem 0;
     border-radius: 7px;
+    display: none;
   }
   .info-address {
     span {

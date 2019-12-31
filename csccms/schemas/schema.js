@@ -17,6 +17,11 @@ export default createSchema({
     type: "document",
     fields: [
       {
+        name: 'image',
+        title: 'Feature Image',
+        type: 'image',
+      },
+      {
         name: 'title',
         title: 'Title',
         type: 'string',
@@ -27,39 +32,44 @@ export default createSchema({
         type: 'date'
       },
       {
-        name: 'featured',
-        title: 'Featured',
-        type: 'boolean',
-      },
-    ]
-  },
-  {
-    name: 'Content',
-    title: 'Content',
-    type: "document",
-    fields: [
-      {
-        name: 'title',
-        title: 'Title',
+        name: 'description',
+        title: 'Description',
         type: 'string',
       },
       {
-        name: 'body',
-        title: 'Body',
-        type: "array",
-        of: [
-          {
-            type: 'block'
-          }
-        ]
-      },
-      {
         name: 'featured',
         title: 'Featured',
         type: 'boolean',
-      }
+      },
     ]
   },
+  // {
+  //   name: 'Content',
+  //   title: 'Content',
+  //   type: "document",
+  //   fields: [
+  //     {
+  //       name: 'title',
+  //       title: 'Title',
+  //       type: 'string',
+  //     },
+  //     {
+  //       name: 'body',
+  //       title: 'Body',
+  //       type: "array",
+  //       of: [
+  //         {
+  //           type: 'block'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       name: 'featured',
+  //       title: 'Featured',
+  //       type: 'boolean',
+  //     }
+  //   ]
+  // },
   {
     title: 'Team Member',
     name: 'team_member',
