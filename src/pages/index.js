@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "../components/header"
-import Event from "../components/Event"
+import Event from "../components/event"
 import About from "../components/about"
 import Contact from "../components/contact"
 import {graphql} from "gatsby";

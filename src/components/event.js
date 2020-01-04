@@ -6,8 +6,7 @@ export default () => (
     <div className="event event1">
       <h3 className="event_title">1st Wednesdays</h3>
       <h4 className="event_info">DJ Supreme Live on the 1's & 2's</h4>
-      <div className="event_description"> 
-        {/* <p>Open Mic Poetry | Spoken Word | Singers</p> */}
+      <div className="event_description">
       </div>
 
     </div>
