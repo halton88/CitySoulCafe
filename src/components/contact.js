@@ -5,12 +5,12 @@ class Contact extends React.Component {
   generateForm(){
     return (
       <form id="contact_form">
-        <input type="text" placeholder="Name"/>
+        <input type="text" placeholder="Name"required/>
         <input type="email" placeholder="Email Address" required/>
         <textarea required></textarea>
         <div id="contact_form-actions">
           <button className="submitButton">Submit</button>
-        <button className="clearButton">Clear</button>
+          <button type="reset" className="clearButton">Clear</button>
         </div>
       </form>
     )
@@ -21,10 +21,10 @@ class Contact extends React.Component {
     buttons.map(button => button.classList.remove('activeForm'))
     if(option === 'A'){
       buttons[0].classList.add('activeForm')
-      
+
     } else if(option === 'B'){
       buttons[1].classList.add('activeForm')
-      
+
     } else if(option === 'C'){
       buttons[2].classList.add('activeForm')
     }
@@ -45,4 +45,3 @@ class Contact extends React.Component {
 }
 
 export default Contact
-  
