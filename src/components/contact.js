@@ -1,5 +1,8 @@
 import React from "react"
 
+import fb from '../images/fb.png'
+import ig from '../images/ig.png'
+
 class Contact extends React.Component {
 
   generateForm(){
@@ -32,6 +35,10 @@ class Contact extends React.Component {
   render(){
     return (
       <div id="contact">
+        <div className="social-icons">
+          <a href="#"><img src = {fb} id="fb" alt="facebook logo"/></a>
+          <a href="#"><img src = {ig} id="ig" alt="instagram logo"/></a>
+        </div>
         <h2 className="contact-title"> Contact Us </h2>
         <nav className="contact_nav">
           <button className="activeForm" onClick={this.selectForm.bind(this, 'A')} id="optionA">General</button>

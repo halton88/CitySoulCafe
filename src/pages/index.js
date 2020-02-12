@@ -5,6 +5,7 @@ import About from "../components/about"
 import Contact from "../components/contact"
 import {graphql} from "gatsby";
 
+
 export const query = graphql`
 query MyQuery {
   allSanityTeamMember {
@@ -12,6 +13,9 @@ query MyQuery {
       name
       primary_title
       secondary_title
+      twitter
+      facebook
+      instagram
       _rawImage
       id
       Image {
@@ -47,7 +51,7 @@ const IndexPage = ({data}) => (
       <p>Noir Bar & Lounge</p>
       <p className="info-address">425 Glenwood ave, Raliegh NC</p>
     </div>
-    <div className="tagline">Speak Your Truth.</div>
+    <div className="tagline">Soul of the City</div>
     <button className="cta">Check Us Out</button>
     </div>
     <Event data={data.allSanityEvent}/>

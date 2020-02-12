@@ -99,6 +99,21 @@ export default createSchema({
         name: 'email',
         title: 'Email',
         type: 'email',
+      },
+      {
+        name: 'facebook',
+        title: 'Facebook Link',
+        type: 'string',
+      },
+      {
+        name: 'instagram',
+        title: 'Instagram Link',
+        type: 'string',
+      },
+      {
+        name: 'twitter',
+        title: 'Twitter',
+        type: 'string',
       }
     ],
   }
