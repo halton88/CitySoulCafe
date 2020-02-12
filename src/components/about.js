@@ -4,6 +4,12 @@ import fb from '../images/fb.png'
 import ig from '../images/ig.png'
 import twitter from '../images/twitter.png'
 
+
+{/* <a href={teammate.twitter}><img id="twitter-personal" src={twitter} alt="twitter logo"/></a>
+<a href={teammate.facebook}><img id="fb-personal" src={fb} alt="facebook logo"/></a>
+<a href={teammate.instagram}><img id="ig-personal" src={ig} alt="instagram logo"/></a> */}
+
+
 const generateTeam = (team) => {
   return (
     team.map((teammate) => (
@@ -13,9 +19,9 @@ const generateTeam = (team) => {
       <p className="team_member-title">{teammate.primary_title}</p>
       <p className="team_member-secondary-title">{teammate.secondary_title}</p>
       <span className="social-personal">
-        <a href={teammate.twitter}><img id="twitter-personal" src={twitter} alt="twitter logo"/></a>
-        <a href={teammate.facebook}><img id="fb-personal" src={fb} alt="facebook logo"/></a>
-        <a href={teammate.instagram}><img id="ig-personal" src={ig} alt="instagram logo"/></a>
+        {teammate.twitter?<a href={teammate.twitter}><img id="twitter-personal" src={twitter} alt="twitter logo"/></a>:null}
+        {teammate.facebook?<a href={teammate.facebook}><img id="fb-personal" src={fb} alt="facebook logo"/></a>:null}
+        {teammate.instagram?<a href={teammate.instagram}><img id="ig-personal" src={ig} alt="instagram logo"/></a>:null}
       </span>
     </div>
     ))

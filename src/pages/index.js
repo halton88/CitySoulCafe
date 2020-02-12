@@ -25,13 +25,6 @@ query MyQuery {
       }
     }
   }
-  allSanityContent {
-    nodes {
-      title
-      featured
-      id
-    }
-  }
   allSanityEvent {
     nodes {
       title

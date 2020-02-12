@@ -187,13 +187,15 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   #ig,
   #fb {
     width: 2rem;
     height: 2rem;
     margin: 1rem;
     margin-block-start: 0;
+    &:hover {
+      opacity: 0.6;
+    }
   }
   #ig {
     position: relative;
@@ -202,6 +204,30 @@ html, body {
     height: 2.3rem;
   }
 }
+
+.social-personal {
+  #twitter-personal,
+  #fb-personal,
+  #ig-personal {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0.5rem;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  #fb-personal {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+    bottom: 2px;
+  }
+  #ig-personal {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
 
 #contact {
   background-color: #930b0b;
