@@ -31,6 +31,7 @@ query MyQuery {
       date(formatString: "")
       featured
       id
+      description
     }
   }
 }
