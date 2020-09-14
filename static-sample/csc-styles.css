@@ -1,0 +1,677 @@
+/** RESET **/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("/fonts/NotoSans/NotoSans-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Merienda One";
+    src: url("/fonts/MeriendaOne/MeriendaOne-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Anton Regular";
+    src: url("/fonts/Anton/Anton-Regular.ttf") format("truetype")
+}
+
+
+/** styles **/
+
+body {
+    font-size: 15pt;
+    font-family: 'Noto Sans', 'Helvetica', ' Segoe UI', 'Tahoma', 'Candara';
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    background-color: maroon;
+    color: white;
+    padding: 3vh 1vw;
+    width: 35vw;
+    margin: 5vh 0;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+h4 {
+    font-size: 0.85rem;
+}
+
+h5 {
+    font-size: 0.75rem;
+}
+
+h6 {
+    font-size: 0.70rem;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.5;
+    text-indent: 2rem;
+}
+
+article header {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.background {
+    height: 100vh;
+    /** 100% of the vertical height **/
+    overflow: hidden;
+}
+
+.background-overlay {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgb(255 255 255 / 33%);
+}
+
+.background-image {
+    z-index: -9999;
+    display: inline-flex;
+    width: 100%;
+    filter: opacity(0.70);
+}
+
+.background-image img {
+    width: inherit;
+    filter: sepia(0.8);
+}
+
+.branding {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.fixed .branding {
+    right: 0;
+    top: 30px;
+    position: fixed;
+}
+
+.branding-tagline {
+    font-family: 'Merienda One', 'Impact', 'Arial Black';
+}
+
+.branding-tagline {
+    font-size: 2rem;
+    text-align: right;
+    text-shadow: 3px -2px maroon;
+    margin: 0 auto;
+}
+
+.branding-tagline--sub {
+    font-family: 'Anton Regular', Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+    border-top: 3px ridge maroon;
+    border-right: 3px ridge maroon;
+    border-bottom: 3px ridge maroon;
+    width: 35vw;
+    padding: 1vw;
+    background: #000000a6;
+    color: white;
+}
+
+.branding-logo {
+    display: inline-block;
+    width: 90vw;
+    text-align: center;
+}
+
+.branding-logo img {
+    height: 35vw;
+}
+
+.page-body {
+    margin: 0;
+    width: 80vw;
+    padding: 2vh 0 0 5vw;
+}
+
+nav,
+footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    margin-bottom: 10vh;
+}
+
+footer {
+    margin-top: 1vh;
+    background: black;
+    color: white;
+}
+
+footer p {
+    padding: 2vh 0;
+    margin: 0;
+    font-size: .85rem;
+    text-align: center;
+}
+
+.block-card {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+    background-color: black;
+    overflow: hidden;
+    flex-grow: 1;
+    position: relative;
+    min-height: 5vh;
+}
+
+.main-nav .block-card {
+    /* min-height: auto; */
+    text-align: center;
+}
+
+.block-card:hover,
+.block-card:focus {
+    box-shadow: 0 10px 50px -5px rgba(51, 71, 91, 0.12);
+}
+
+.block-card:hover a,
+.block-card:focus a {
+    text-decoration: underline;
+}
+
+.main-nav .block-card {
+    /* background: black; */
+    /* color: #f1eded; */
+}
+
+.main-nav .block-card:nth-child(odd) {
+    /* background: black; */
+}
+
+.main-nav .block-card .block-card__content-title {
+    /* color:black; */
+    display: block;
+}
+
+.main-nav .block-card:nth-child(odd) .block-card__content-title {
+    /* color: white; */
+}
+
+.main-nav .block-card:nth-child(2) {
+    /* background:white; */
+}
+
+.block-card--one-third {
+    width: 33.33vw;
+}
+
+.block-card--one-fourth {
+    width: 24.6vw;
+}
+
+.block-card--two-thirds {
+    width: 66.66vw;
+    flex-grow: 1
+}
+
+.block-card--compact {
+    min-height: auto;
+    margin-right: 0
+}
+
+.block-card--compact .block-card__content-title a {
+    min-height: auto
+}
+
+.block-card--compact:last-child {
+    margin-bottom: 0
+}
+
+.block-card--featured {
+    width: calc(64% - 0.5rem);
+    flex-grow: 1
+}
+
+.block-card--featured .block-card__content-title a {
+    min-height: 180px
+}
+
+.block-card--featured figure {
+    padding-bottom: 70%
+}
+
+.block-card--no-hover:hover {
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.block-card--no-img {
+    background: transparent
+}
+
+.block-card--no-img figure {
+    display: none;
+}
+
+.block-card--no-img .block-card__content-title a {
+    padding-bottom: 0;
+    font-weight: 500;
+    min-height: 0
+}
+
+.block-card--no-img .block-card__content-description {
+    margin-top: 0;
+    margin-bottom: 2rem
+}
+
+.block-card--no-img .block-card__content-description a {
+    padding: 1rem
+}
+
+.block-card li {
+    margin: 0;
+    height: 0;
+    position: relative;
+    width: 100%;
+    flex-grow: 2;
+    overflow: hidden
+}
+
+.block-card li a {
+    display: block;
+    word-break: break-all;
+}
+
+.block-card li a img {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+}
+
+.block-card__content a {
+    display: block;
+    color: black;
+}
+
+.block-card__content a:hover,
+.block-card__content a:focus {
+    text-decoration: none
+}
+
+.block-card__content-title {
+    margin: 0;
+    padding: 1.5vh 0 1.5vh 0;
+    /* line-height: 1.5; */
+}
+
+.block-card__content-title a {
+    font-size: 0.95em;
+    line-height: 1.3125em;
+    min-height: 10vh;
+    text-align: center;
+}
+
+.block-card--compact .block-card__content-title a {
+    font-size: .8125rem;
+    padding: 1.125rem 1.125rem 2.25rem
+}
+
+.block-card__content-topic {
+    margin: 0
+}
+
+.block-card__content-topic a {
+    font-size: .9375rem;
+    padding: 1rem 1rem 0
+}
+
+.block-card li {
+    padding-bottom: 56.25%;
+}
+
+.main-nav {
+    display: inline-flex;
+    position: sticky;
+}
+
+.main-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    list-style: none;
+}
+
+.main-nav .block-card a {
+    text-decoration: none;
+}
+
+
+/* .main-nav .block-card a img {
+    display: none;
+}
+.main-nav .block-card a:hover img,
+.main-nav .block-card a:focus img  {
+    display: block;
+} */
+
+.main-nav .block-card a:hover,
+.main-nav .block-card a:focus {
+    text-decoration: underline;
+}
+
+.main-nav .block-card a {
+    overflow: hidden;
+    color: white;
+}
+
+.main-nav .block-card a:hover img,
+.main-nav .block-card a:focus img {
+    filter: sepia(.70);
+}
+
+.main-nav .block-card a img {
+    max-height: 244px;
+    width: 25vw;
+}
+
+form {
+    margin: 10vh auto;
+    width: 30vw;
+    border: 2px solid darkgrey;
+    padding: 5vh;
+}
+
+.form-control label,
+.form-control input,
+.form-control select,
+.form-control button {
+    display: inline-block;
+    padding: 10px;
+    width: 20vw;
+}
+
+.form-control label {
+    width: 20vw;
+    height: 5vh;
+}
+
+form button {
+    margin: 1vh 0;
+}
+
+.abstract-block {
+    padding: 5vh 0;
+    vertical-align: top;
+}
+
+.abstract-block_content {
+    width: 46vw;
+    display: inline-block;
+    margin-left: 5vw;
+}
+
+.abstract-block.compact {
+    display: inline-block;
+    width: 250px;
+}
+
+.abstract-block_title {
+    font-weight: bold;
+}
+
+.abstract-block_image img {
+    min-width: 15vw;
+    max-width: 28vw;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.abstract-block .abstract-block_image {
+    margin: 0 auto;
+    /* text-align: center; */
+    display: inline-block;
+    width: 25vw;
+}
+
+.abstract-block .abstract-block_title {
+    text-align: center;
+}
+
+.abstract-block .abstract-block_title__sub {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.compact .abstract-block_image img {
+    min-width: 200px;
+    max-height: 225px;
+}
+
+.compact .abstract-block_image {
+    margin: 3vh auto;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        width: 80vw;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+    .branding {
+        left: 0;
+    }
+    .branding-logo {
+        height: 200px;
+    }
+    .branding-logo img {
+        height: inherit;
+    }
+    .branding-tagline--sub {
+        padding: 15px 0;
+        width: 59vw;
+        margin: 3vh 0;
+        padding: 3vh;
+    }
+    .block-card {
+        margin: 0 0 1rem;
+    }
+    .main-nav .block-card {
+        margin: 0;
+    }
+    .block-card li a img {
+        height: auto;
+    }
+    .main-nav ul li a img {
+        display: none;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .block-card--one-third,
+    .block-card--two-thirds,
+    .block-card--compact,
+    .block-card--featured {
+        width: 100%
+    }
+    [lang|='ja'] .block-card--compact,
+    [lang|='jp'] .block-card--compact {
+        min-height: 7.5rem
+    }
+    .page-body {
+        margin-right: 5rem;
+    }
+    .block-card li a img {
+        display: none;
+    }
+    .block-card li {
+        padding-bottom: 0;
+    }
+}
