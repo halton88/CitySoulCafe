@@ -203,6 +203,264 @@ article header {
     overflow: hidden;
 }
 
+section {
+    padding-top: 5vh;
+}
+
+.background-overlay {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgb(255 255 255 / 33%);
+}
+
+.background-image {
+    z-index: -9999;
+    display: inline-flex;
+    width: 100%;
+    filter: opacity(0.70);
+}
+
+.background-image img,
+.background-image video {
+    width: inherit;
+    filter: sepia(0.8);
+}
+
+.branding {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.fixed .branding {
+    right: 0;
+    top: 30px;
+    position: fixed;
+}
+
+.branding-tagline {
+    font-family: 'Merienda One', 'Impact', 'Arial Black';
+}
+
+.branding-tagline {
+    font-size: 1.75rem;
+    text-align: right;
+    text-shadow: 3px -2px maroon;
+    margin: 0 auto;
+}
+
+
+/** RESET **/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("/fonts/NotoSans/NotoSans-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Merienda One";
+    src: url("/fonts/MeriendaOne/MeriendaOne-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Anton Regular";
+    src: url("/fonts/Anton/Anton-Regular.ttf") format("truetype")
+}
+
+
+/** styles **/
+
+body {
+    font-size: 15pt;
+    font-family: 'Noto Sans', 'Helvetica', ' Segoe UI', 'Tahoma', 'Candara';
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    background-color: maroon;
+    color: white;
+    padding: 3vh 1vw;
+    width: 35vw;
+    margin: 5vh 0;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+h4 {
+    font-size: 0.85rem;
+}
+
+h5 {
+    font-size: 0.75rem;
+}
+
+h6 {
+    font-size: 0.70rem;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.75;
+    text-indent: 2rem;
+}
+
+article header {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.background {
+    height: 100vh;
+    /** 100% of the vertical height **/
+    overflow: hidden;
+}
+
+section {
+    padding-top: 5vh;
+}
+
 .background-overlay {
     height: inherit;
     width: 100%;
@@ -240,7 +498,7 @@ article header {
 }
 
 .branding-tagline {
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: right;
     text-shadow: 3px -2px maroon;
     margin: 0 auto;
@@ -248,7 +506,7 @@ article header {
 
 .branding-tagline--sub {
     font-family: 'Anton Regular', Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-top: 3px ridge maroon;
     border-right: 3px ridge maroon;
     border-bottom: 3px ridge maroon;
@@ -256,6 +514,7 @@ article header {
     padding: 1vw;
     background: #000000a6;
     color: white;
+    margin: 5vh 0;
 }
 
 .branding-logo {
@@ -285,16 +544,25 @@ nav {
 }
 
 footer {
-    margin-top: 1vh;
     background: black;
     color: white;
+    padding: 1vh 0;
+}
+
+.footer_logo {
+    background: black;
+    display: inline-block;
+}
+
+.footer_logo-image {
+    width: 100px;
 }
 
 footer p {
-    padding: 2vh 0;
-    margin: 0;
+    margin: 0 auto;
     font-size: .85rem;
     text-align: center;
+    vertical-align: middle;
 }
 
 .block-card {
@@ -310,7 +578,6 @@ footer p {
 }
 
 .main-nav .block-card {
-    /* min-height: auto; */
     text-align: center;
 }
 
@@ -324,26 +591,21 @@ footer p {
     text-decoration: underline;
 }
 
-.main-nav .block-card {
-    /* background: black; */
-    /* color: #f1eded; */
-}
-
-.main-nav .block-card:nth-child(odd) {
-    /* background: black; */
-}
-
 .main-nav .block-card .block-card__content-title {
-    /* color:black; */
     display: block;
 }
 
-.main-nav .block-card:nth-child(odd) .block-card__content-title {
-    /* color: white; */
+a .block-card__content-title {
+    border-bottom: 4px solid black;
 }
 
-.main-nav .block-card:nth-child(2) {
-    /* background:white; */
+a:hover .block-card__content-title,
+a:focus .block-card__content-title {
+    border-bottom-color: maroon;
+}
+
+.one-fourth {
+    width: 24.6vw;
 }
 
 .block-card--one-third {
@@ -541,10 +803,16 @@ form {
 .form-control label,
 .form-control input,
 .form-control select,
+.form-control textarea,
 .form-control button {
     display: inline-block;
-    padding: 10px;
-    width: 20vw;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+    padding: 15px;
+    width: 27vw;
 }
 
 .form-control label {
@@ -569,7 +837,13 @@ form button {
 
 .abstract-block.compact {
     display: inline-block;
-    width: 250px;
+    /* width: 250px; */
+    text-align: center;
+    padding: 0;
+    margin: 3vh auto;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+    border-radius: 20px;
 }
 
 .abstract-block_title {
@@ -577,20 +851,26 @@ form button {
 }
 
 .abstract-block_image img {
-    min-width: 15vw;
-    max-width: 28vw;
+    width: inherit;
+    height: inherit;
     filter: drop-shadow(2px 4px 6px black);
 }
 
 .abstract-block .abstract-block_image {
     margin: 0 auto;
-    /* text-align: center; */
+    vertical-align: inherit;
     display: inline-block;
     width: 25vw;
 }
 
 .abstract-block .abstract-block_title {
     text-align: center;
+    line-height: 1.5;
+}
+
+.abstract-block_image-title .abstract-block_title {
+    background: #585858;
+    color: white;
 }
 
 .abstract-block .abstract-block_title__sub {
@@ -598,13 +878,27 @@ form button {
     line-height: 1.5;
 }
 
+.abstract-block_image-title .abstract-block_title__sub {
+    border: black 1px solid;
+    border-top: none;
+    color: maroon;
+}
+
 .compact .abstract-block_image img {
-    min-width: 200px;
-    max-height: 225px;
+    /* min-width: 200px;
+    max-height: 225px; */
 }
 
 .compact .abstract-block_image {
-    margin: 3vh auto;
+    /* margin: 3vh auto; */
+    height: 200px;
+    width: auto;
+}
+
+.media_video--full-wide video {
+    width: 90vw;
+    height: 50vh;
+    filter: sepia(1);
 }
 
 .sticky {
@@ -614,9 +908,57 @@ form button {
     z-index: 9999;
 }
 
+@media (min-width: 501px) and (max-width: 768px) {
+    nav {
+        margin: 0;
+    }
+    .page-body {
+        margin-right: 5rem;
+    }
+    .one-fourth {
+        width: 46.6vw;
+    }
+    .block-card--one-fourth {
+        width: 24.3vw;
+    }
+    .block-card--one-third,
+    .block-card--two-thirds,
+    .block-card--compact,
+    .block-card--featured {
+        width: 100%
+    }
+    .block-card li a img {
+        display: none;
+    }
+    .block-card li {
+        padding-bottom: 0;
+    }
+    .branding {
+        left: 0;
+    }
+    .branding-logo {
+        height: 180px;
+        max-height: 240px;
+    }
+    .branding-logo img {
+        height: inherit;
+    }
+    .block-card {
+        margin: 0 0 1rem;
+    }
+    .block-card li a img {
+        height: auto;
+    }
+}
+
 @media (max-width: 767px) {
+    body {
+        font-size: 12pt;
+    }
     h2 {
+        font-size: 1.15rem;
         width: 80vw;
+        padding: 2vh 2vw;
     }
     h2,
     h3,
@@ -625,53 +967,81 @@ form button {
     h6 {
         margin: 0;
     }
-    .branding {
-        left: 0;
+    .background {
+        height: 55vh;
     }
-    .branding-logo {
-        height: 200px;
-    }
-    .branding-logo img {
-        height: inherit;
-    }
-    .branding-tagline--sub {
-        padding: 15px 0;
-        width: 59vw;
-        margin: 3vh 0;
-        padding: 3vh;
-    }
-    .block-card {
-        margin: 0 0 1rem;
-    }
-    .main-nav .block-card {
-        margin: 0;
-    }
-    .block-card li a img {
-        height: auto;
+    .background-image {
+        width: 100vw;
+        height: 60vh;
     }
     .main-nav ul li a img {
         display: none;
     }
+    .main-nav .block-card {
+        margin: 0;
+        width: 25vw;
+    }
+    .branding-tagline {
+        font-size: 1.15rem;
+    }
+    .branding-tagline--sub {
+        padding: 15px 0;
+        padding: 2vh 1vw;
+        font-size: 0.95rem;
+        width: 85vw;
+    }
+    form {
+        width: auto;
+    }
+    .form-control input,
+    .form-control select,
+    .form-control textarea,
+    .form-control button {
+        width: inherit;
+    }
+    .form-control button {
+        display: block;
+        padding: 2vh 0;
+        margin-top: 5vh;
+    }
+    .form-control {
+        /* height: 10vh; */
+        width: 90%;
+        margin: 2vh 0;
+    }
+    .abstract-block_content {
+        margin: 0;
+        width: auto;
+    }
+    .abstract-block .abstract-block_image {
+        width: 40vw;
+    }
+    .abstract-block .abstract-block_image,
+    .abstract-block .abstract-block_content {
+        display: inline-block;
+    }
 }
 
-@media (min-width: 501px) and (max-width: 768px) {
-    .block-card--one-third,
-    .block-card--two-thirds,
-    .block-card--compact,
-    .block-card--featured {
-        width: 100%
-    }
-    [lang|='ja'] .block-card--compact,
-    [lang|='jp'] .block-card--compact {
-        min-height: 7.5rem
-    }
-    .page-body {
-        margin-right: 5rem;
-    }
-    .block-card li a img {
-        display: none;
-    }
-    .block-card li {
-        padding-bottom: 0;
-    }
+.media_image {
+    width: 25vw;
+    float: left;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.media_image--left {
+    margin: 5vh 5vw 5vh 0;
+    border-right: 4px solid black;
+    padding-right: 2vw;
+}
+
+.media_image img {
+    width: inherit;
+}
+
+.media_image--right {
+    float: right;
+    margin: 0vh 0 0vw 5vh;
+    border-left: 4px solid black;
+    padding-left: 2vw;
 }
